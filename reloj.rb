@@ -1,12 +1,14 @@
 require 'date'
 
 class Reloj
-  # 04:05 PM
+   def initialize
+      @prendida= false
+  end
   def definir!(hora)
       @alarma= DateTime.strptime(hora, '%I:%M %p')
   end
 
-  def definida
+  def alarma
     @alarma
   end
 
@@ -21,7 +23,6 @@ class Reloj
   def prendida?
     @prendida
   end
-  # 04:05:06 PM
 
   def sonar?(hora)
     ahora = DateTime.strptime(hora, '%I:%M:%S %p')
