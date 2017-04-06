@@ -1,5 +1,5 @@
 Feature: Alarma del Reloj
-  Como usuario quiero que cuando la alarma está prendida, 
+  Como usuario quiero que cuando la alarma esta prendida, 
   suene en el momento que el horario del reloj coincide con el horario definido
 
   Scenario: Alarma suena a la hora definida
