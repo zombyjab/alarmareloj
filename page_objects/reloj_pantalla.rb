@@ -24,7 +24,7 @@ class RelojPantalla
         @browser.find_element(:id,'set_alarm_button').click
     end
 
-    def esperar_que_suene(segundos: '120')
+    def esperar_que_suene(segundos: '180')
         wait = Selenium::WebDriver::Wait.new(timeout: segundos.to_i)
         wait.until { @browser.find_element(id: "stop_alarm_button").displayed? }
     end
