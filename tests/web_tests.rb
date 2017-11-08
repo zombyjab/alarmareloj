@@ -15,8 +15,8 @@ describe 'reloj web' do
 
         pantalla = RelojPantalla.new(browser)
         pantalla.abrir()
-        pantalla.establecer_hora_alarma('¿hora alarma?')
-        pantalla.establecer_minutos_alarma('¿minutos alarma?')
+        pantalla.establecer_hora_alarma('[hora de la alarma]')
+        pantalla.establecer_minutos_alarma('[minutos de la alarma]')
         pantalla.definir_alarma()
         pantalla.esperar_que_suene(segundos: '180')
         sonando = pantalla.sonando?
