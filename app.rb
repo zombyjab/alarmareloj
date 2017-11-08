@@ -13,8 +13,8 @@ end
 
 get '/api/alarma/sonar' do
     reloj=Reloj.new
-    reloj.definir!(params["hora-alarma"])
-    reloj.prender!
+    reloj.definir_alarma(params["hora-alarma"])
+    reloj.prender
     sonar = reloj.sonar?(params["hora-actual"])
 
     {:'hora-alarma'=>params["hora-alarma"],:'hora-actual'=>params["hora-actual"],:sonar => sonar}.to_json
