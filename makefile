@@ -1,7 +1,11 @@
 unit-tests:
 	docker build -t alarmareloj .
-	docker run -t alarmareloj rspec
+	docker run -t alarmareloj rspec tests/unit_tests.rb
 
-cucumber:
+api-tests:
 	docker build -t alarmareloj .
-	docker run -t alarmareloj cucumber
+	docker run -t alarmareloj rspec tests/api_tests.rb
+
+web-tests:
+	docker build -t alarmareloj .
+	docker run -t alarmareloj rspec tests/web_tests.rb
