@@ -5,7 +5,6 @@ podTemplate(label: label, containers: [
         container('ruby-alpine'){
             
             stage('Download Code') {
-                //git 'https://github.com/snahider/alarmareloj'
                 checkout scm
             }
             
