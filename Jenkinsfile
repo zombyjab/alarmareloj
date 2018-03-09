@@ -21,6 +21,10 @@ podTemplate(label: label, containers: [
             stage('API Tests') {
                 sh 'rspec tests/api_tests.rb'
             }
+
+            stage('Package Application') {
+                archiveArtifacts './**/*.*'
+            }
         }
     }
 }
