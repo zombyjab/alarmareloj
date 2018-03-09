@@ -8,7 +8,7 @@ podTemplate(label: label, containers: [
                 checkout scm
             }
             
-            stage('Build') {
+            stage('Install Dependencies') {
                 sh 'apk --update add make build-base'
                 sh 'ls'
                 sh 'gem install bundler && bundle install'
