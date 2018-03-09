@@ -23,7 +23,7 @@ podTemplate(label: label, containers: [
             }
 
             stage('Package Application') {
-                archiveArtifacts './**/*.*'
+                archiveArtifacts '.'
             }
         }
     }
